@@ -47,11 +47,15 @@ class Util{
 
     }
 
-    public static function txt($txt){
+    public static function toTxt($txt){
 
         $file = fopen("./resources/pruebas.txt", "w") or die("Problemas");
         fwrite($file, $txt);
         fclose($file);
+
+    }
+
+    public static function returnArrayOfLinks(){
 
     }
 
