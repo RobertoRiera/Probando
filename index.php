@@ -1,9 +1,7 @@
 <?php
 include_once './resources/lib.php';
-include_once 'HtmlDoc.php';
-include_once 'WordDoc.php';
-
-
+include_once './resources/HtmlDoc.php';
+include_once './resources/WordDoc.php';
 
 View::start("Etnonautas");
 

@@ -1,6 +1,6 @@
 <?php
 
-require 'HtmlDoc.php';
+require '../resources/HtmlDoc.php';
 class HtmlCountTest extends PHPUnit_Framework_TestCase
 {
     public function testHtmlCount(){
