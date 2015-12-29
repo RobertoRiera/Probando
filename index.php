@@ -1,8 +1,12 @@
 <?php
 include_once './resources/lib.php';
 include_once 'HtmlDoc.php';
+include_once 'WordDoc.php';
+
+
 
 View::start("Etnonautas");
+
 
 
 $url='http://orienta.hol.es/pruebas/';
@@ -12,13 +16,16 @@ $HTMLPage = file_get_contents($url);
 //$HTMLPage = 'en esta http://stringer.com ha de href=http://stringer.com buscar stringer, >';
 
 
-//if(preg_match_all("#[(?<=href=\")|(?<=href=\')|(?<=href=)][^ ]*[?=\"|?=\'|?= ]#", $HTMLPage, $coincidencias, PREG_OFFSET_CAPTURE)){
-if(preg_match_all("#(?<=href=)[\'|\"]?.*[\'|\"]?#", $HTMLPage, $coincidencias, PREG_OFFSET_CAPTURE)){
+
+if(preg_match_all('/<a[^>]*href="([^"]*)"[^>]*>.*<\/a>/', $HTMLPage, $coincidencias, PREG_OFFSET_CAPTURE)){
+//if(preg_match_all("#(?<=href=)[\'|\"]?.*[\'|\"]?#", $HTMLPage, $coincidencias, PREG_OFFSET_CAPTURE)){
     echo 'se han encontrado '.sizeof($coincidencias[0]).' coincidencias : ';
     print_r($coincidencias);
 }else{
     echo'Pues nada...';
 }
+
+
 
 Util::toTxt($HTMLPage);
 
