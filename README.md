@@ -1,5 +1,5 @@
-# Probando
-Cuenta palabras de un HTML (sin contar etiquetas)
+# WordCounter
+Cuenta palabras de archivos HTML, PDF y Doc
 
 
 Proyecto trasladado a Bitbucket.
